@@ -1,0 +1,38 @@
+<br/>
+<h1 class="ui horizontal divider header">Realtime Dashboard Demo</h1>
+<br/>
+
+<div class="ui decorated segment">
+    <div class="ui list">
+      <div class="item">
+        <div class="two ui buttons">
+          <button class="ui blue button" (click)='addSlice()'>+ Slice</button>
+          <div class="or"></div>
+          <button class="ui orange button" (click)='removeSlice()'>- Slice</button>
+        </div>
+      </div>
+      <div class="item">
+        <div class="two ui buttons">
+          <button class="ui blue button" (click)='addPie()'>+ Pie</button>
+          <div class="or"></div>
+          <button class="ui orange button" (click)='removePie()'>- Pie</button>
+        </div>
+      </div>
+      <div class="item">
+        <div class="two ui buttons">
+          <button class="ui green button" (click)='start()'>Start</button>
+          <div class="or"></div>
+          <button class="ui red button" (click)='stop()'>Stop</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="ui decorated segment">
+    <asterpie *ngFor="let item of items"
+        class = "asterpie effect1"
+        [data] = "item"
+    ></asterpie>
+</div>
+
+

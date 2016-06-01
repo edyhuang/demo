@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title>Dashboard Demo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--<link rel="stylesheet" href="/node_modules/slickgrid-6pac/slick.grid.css" type="text/css"/>
+    <link rel="stylesheet" href="/_/css/jquery-ui-1.8.16.custom.css" type="text/css"/>
+    <link rel="stylesheet" href="/_/css/custom.grid.css" type="text/css"/>
+    <link rel="stylesheet" href="/_/css/common.css" type="text/css"/>
+    <link rel="stylesheet" href="/node_modules/slickgrid-6pac/controls/slick.pager.css" type="text/css"/>
+    <link rel="stylesheet" href="/node_modules/slickgrid-6pac/controls/slick.columnpicker.css" type="text/css"/>-->
+    <link rel="stylesheet" href='/node_modules/semantic/dist/semantic.min.css' type="text/css"/>
+
+     <!-- Polyfill(s) for older browsers -->
+    <script src="/node_modules/es6-shim/es6-shim.min.js"></script>
+    <script src="/node_modules/zone.js/dist/zone.js"></script>
+    <script src="/node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="/node_modules/systemjs/dist/system.src.js"></script>
+    
+    <!-- Load Systemjs incompatible libraries -->
+    <script src="/_/lib/sockjs-1.1.0.min.js"></script>
+    
+    <!-- Configure SystemJS -->
+    <script src="/config.js"></script>
+    <script>
+      System.import('demo').catch(function(err){ console.error(err);  });
+    </script>
+  </head>
+
+  <!-- Display the application -->
+  <body>
+      <demo class="maximize">
+          <img src="/_/images/busy.gif" />
+      </demo>
+  </body>
+</html>

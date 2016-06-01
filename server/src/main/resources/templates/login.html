@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+    <head>
+        <link th:href="@{/_/css/semantic.min.css}" rel="stylesheet"/>
+        <script th:src="@{/_/lib/semantic.min.js}"></script>    
+		<style>
+			body{
+				background-color:#f1fff1;
+			}
+			
+			.watermark {
+				background-position:0 0;
+				background-repeat: no-repeat;
+				position: relative;
+				width:100%;
+				height:100%;
+				z-index:99;
+			}
+			
+			.transparency {
+				opacity:0.98;
+			}
+			
+			#centerLoginForm {
+				width:280px;
+				margin: auto;
+				top:50%;
+				transform: translateY(-50%);
+			}
+			
+			#centerIt {
+				text-align:center;
+			}
+			
+			.ui.green.segment:not(.inverted) {
+				border-top: 5px solid #21ba45;
+			}
+			
+			.ui.raised.segment, .ui.raised.segments {
+				box-shadow: 5px 5px 10px 0 rgba(0,0,0,.95),5px 5px 10px 0 rgba(0,0,0,.95);
+			}
+						
+		</style>
+        <title>Demo Login</title>
+    </head>
+	<body>
+    	<div class="watermark"> 
+			<div class="ui green raised segment transparency" id="centerLoginForm">
+				<form th:action="@{/login}" method="post" class="ui form" >
+					<div th:if="${param.error}" class="ui pointing below basic red label">
+						Invalid User ID or Password Entry.
+					</div>
+					<div class="ui left icon field required inline">
+						<i class="user icon large gray"></i>
+						<input type="text" name="username" value="" placeholder="User ID:"/> 
+					</div>
+					<div class="ui left icon field inline">
+						<i class="lock icon large gray"></i>
+						<input type="password" name="password" value=""  placeholder="Password:"/>
+					</div>
+					<div id="centerIt" class="segment">
+						<input class="ui green button" type="submit" value="Sign In"/>
+					</div>            
+					<div th:if="${param.logout}" class="ui pointing basic label">
+						You have been logged out.
+					</div>
+					<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+				</form>        
+			</div>
+        </div>
+    </body>
+</html>
