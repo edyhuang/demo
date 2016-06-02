@@ -92,6 +92,8 @@ public class SampleController extends MessagingController
 	{
 		if (!emit) return;
 		
+		if (filters.isEmpty()) return;
+		
 		for (int i=0; i<pieCount; i++)
 			samplesQueue.push(new SamplePie(sliceCount));
 		
