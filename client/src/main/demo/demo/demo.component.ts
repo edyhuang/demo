@@ -1,7 +1,7 @@
 import {Component, Input, Output, EventEmitter, OnChanges, SimpleChange, ViewEncapsulation} from '@angular/core';
 import {Asterpie} from '../common/asterpie.directive';
 import {DemoService} from './demo.service';
-import 'semantic/semantic.min';
+import '/_/lib/semantic.min.js';
 
 @Component({
     moduleId: module.id,

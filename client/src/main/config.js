@@ -11,7 +11,7 @@
     'rxjs':                                 '/node_modules/rxjs',
     'stompjs':                              '/node_modules/stompjs/lib',
     'slick':                                '/node_modules/slickgrid-6pac',    
-    'semantic':                             '/node_modules/semantic/dist',
+    // 'semantic':                             '/node_modules/semantic/dist',
         
     'angular2-in-memory-web-api':           '/node_modules/angular2-in-memory-web-api',
     '@angular':                             '/node_modules/@angular'
@@ -29,7 +29,7 @@
     'slick.custom':                         { defaultExtension: 'js' },
     'rxjs':                                 { defaultExtension: 'js' },
     'angular2-in-memory-web-api':           { defaultExtension: 'js' },
-    'semantic':                             { defaultExtension: 'js' },
+    // 'semantic':                             { defaultExtension: 'js' },
   };
 
   var packageNames = [
