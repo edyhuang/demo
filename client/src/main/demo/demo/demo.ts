@@ -1,10 +1,10 @@
 import {lockDown} from '../util/browser-lock.util';
-import { bootstrap } from '@angular/platform-browser-dynamic';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import {enableProdMode} from '@angular/core';
-import { DemoComponent } from './demo.component';
+import { DemoModule } from './demo.module';
 
 enableProdMode();
  
-bootstrap(DemoComponent);
+platformBrowserDynamic().bootstrapModule(DemoModule);
 
 lockDown('dashboard.html');

@@ -37,6 +37,9 @@ export class DemoComponent {
     stop = () => {
         this.filter.emit = false;
         this.demoService.send(JSON.stringify(this.filter));
+
+        //this is to show dynamic library loading
+        System.import('./dynamic-library-loading').then(dlib => dlib.load());
     };
     
     addPie = () => {
